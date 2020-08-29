@@ -153,15 +153,21 @@
 
 /* console.log(todoCompleted); */
 
-// constructor function
-function Person(firstName, lastName, dob) {
-	this.firstName = firstName;
-	this.lastName = lastName;
-	this.dob = new Date(dob);
-	this.getBirthYear = function() {
+
+// class
+class Person {
+	constructor(firstName, lastName, dob) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dob = new Date(dob);
+
+	}
+
+	getFullYear() {
 		return this.dob.getFullYear();
 	}
-	this.getFullName = function() {
+
+	getFullName() {
 		return `${this.firstName} ${this.lastName}`
 	}
 }
@@ -170,5 +176,6 @@ function Person(firstName, lastName, dob) {
 const person1 = new Person('Pedro', 'las', '4-3-1980');
 const person2 = new Person('Maria', 'Salas', '3-4-1974');
 
-console.log(person1.getBirthYear());
+console.log(person2.getFullName());
 console.log(person1.getFullName());
+console.log(person1);
